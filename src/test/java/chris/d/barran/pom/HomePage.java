@@ -1,4 +1,4 @@
-package chris.d.barran;
+package chris.d.barran.pom;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,24 +7,24 @@ import org.openqa.selenium.WebElement;
 /**
  * Created by chris on 11/07/2017.
  */
-public class RichtoneHomePage {
+public class HomePage {
 
     private WebDriver webDriver;
 
     By secondHandLink = By.linkText("2nd Hand");
 
-    public RichtoneHomePage(WebDriver webDriver) {
+    public HomePage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
 
-    public String getHomePageTitle(){
+    public String title(){
         return webDriver.getTitle();
     }
 
-    public RichtoneSecondHandPage goToSecondHandPage() {
+    public SecondHandPage navigateToSecondHandPage() {
         WebElement link = webDriver.findElement(secondHandLink);
         link.click();
-        return new RichtoneSecondHandPage(webDriver);
+        return new SecondHandPage(webDriver);
     }
 
 }
