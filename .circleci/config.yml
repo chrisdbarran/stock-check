@@ -47,6 +47,6 @@ jobs:
       - store_test_results:
           path: /junit
 
-      - store_artefacts:
+      - store_artifacts:
           path: /junit
 
