@@ -2,6 +2,9 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="RichtoneTests">
     <test name="CheckStockTest">
-        <classes><class name="chris.d.barran.CheckStock"></class></classes>
+        <classes>
+            <class name="chris.d.barran.CheckStock"></class>
+            <class name="chris.d.barran.TaylorMiniInStock"></class>
+        </classes>
     </test>
 </suite>
