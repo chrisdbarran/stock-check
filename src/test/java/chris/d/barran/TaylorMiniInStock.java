@@ -43,12 +43,10 @@ public class TaylorMiniInStock {
     }
 
     @Test(priority = 0)
-    public void testHaveTaylorMiniInStock() {
+    public void testHaveNoSecondHandTaylorMiniInStock() {
 
-        // GS Mini, GS Mini-e, GS MiniE, GS Mini-E
-        // GS Mini?-[eE]
-        //String modelRegEx = ".*GS.Mini.*";
-        String modelRegEx =".*W14C.*";
+        String modelRegEx = ".*GS.Mini.*";
+
 
         secondHandTaylorAcousticPage = new SecondHandTaylorAcousticPage(webDriver);
 
@@ -58,6 +56,6 @@ public class TaylorMiniInStock {
 
         guitarsInStock.forEach((guitar) -> { System.out.println(guitar);});
 
-        // No assertion I want this to always pass and run without complaint.
+        Assert.assertTrue(guitarsInStock.size() == 0);
     }
 }
